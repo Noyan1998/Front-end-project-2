@@ -26,3 +26,9 @@ for (let i=0; i<=3; i++) {
 var scroll = new SmoothScroll('a[href*="#"]', {
   speed: 1000
 });
+
+// Adding eventlistener to  set the appropriate section as active when the user scrolls to it
+
+window.addEventListener('scroll', function() {
+  
+})
