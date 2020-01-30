@@ -223,7 +223,6 @@ section.your-active-class .landing__container::after {
 }
 
 /* Adding styling for active states */
-a:active {
+a:active, .active {
     background-color: orange;
-    color: white;
 }
