@@ -28,21 +28,29 @@ var scroll = new SmoothScroll('a[href*="#"]', {
 });
 
 // Adding eventlistener to  set the appropriate section as active when the user scrolls to it
-window.addEventListener('scroll', function() {
-  let navigationLinks = document.querySelectorAll('nav ul li a');
+window.addEventListener("scroll", function() {
+  let navigationLinks = document.querySelectorAll("nav ul li a");
 
   navigationLinks.forEach(link => {
     let section = document.querySelector(link.hash);
+    console.log(section);
     let bounding = section.getBoundingClientRect();
-
+    console.log(
+      section.id,
+      bounding.bottom,
+      bounding.left,
+      bounding.top,
+      window.innerHeight
+    );
     if (
       bounding.top >= 0 &&
       bounding.left >= 0 &&
-      bounding.bottom <= window.innerHeight
+      bounding.bottom <= window.innerHeight + 50
     ) {
-      link.classList.add('active');
+      console.log("sds");
+      link.classList.add("active");
     } else {
-      link.classList.remove('active');
+      link.classList.remove("active");
     }
   });
 });
