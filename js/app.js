@@ -33,21 +33,17 @@ window.addEventListener("scroll", function() {
 
   navigationLinks.forEach(link => {
     let section = document.querySelector(link.hash);
-    console.log(section);
     let bounding = section.getBoundingClientRect();
-    console.log(
       section.id,
       bounding.bottom,
       bounding.left,
       bounding.top,
-      window.innerHeight
-    );
+      window.innerHeight;
     if (
       bounding.top >= 0 &&
       bounding.left >= 0 &&
-      bounding.bottom <= window.innerHeight + 50
+      bounding.bottom <= window.innerHeight + 300
     ) {
-      console.log("sds");
       link.classList.add("active");
     } else {
       link.classList.remove("active");
